@@ -36,4 +36,4 @@
 		);
 		?>
 	</footer><!-- .entry-footer -->
-</article>
+</article><!-- #post-## -->

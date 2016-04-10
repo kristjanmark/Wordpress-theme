@@ -26,4 +26,4 @@
 	<footer class="entry-footer">
 		<?php bootstrap_to_wordpress_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
-</article>
+</article><!-- #post-## -->
