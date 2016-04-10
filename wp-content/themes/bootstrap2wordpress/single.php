@@ -2,34 +2,41 @@
 /**
  * The template for displaying all single posts.
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package Bootstrap_to_Wordpress
+ * @package Bootstrap to WordPress
  */
-
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<!-- BLOG CONTENT
+    ================================================== -->
+	<div class="container">
+		<div class="row" id="primary">
 
-		<?php
-		while ( have_posts() ) : the_post();
+			<main id="content" class="col-sm-8">
 
-			get_template_part( 'template-parts/content', get_post_format() );
+				<?php while ( have_posts() ) : the_post(); ?>
 
-			the_post_navigation();
+					<?php get_template_part( 'content', 'single' ); ?>
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+					<?php bootstrap2wordpress_post_nav(); ?>
 
-		endwhile; // End of the loop.
-		?>
+					<?php
+					// If comments are open or we have at least one comment, load up the comment template
+					if ( comments_open() || get_comments_number() ) :
+						comments_template();
+					endif;
+					?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+				<?php endwhile; // end of the loop. ?>
 
-<?php
-get_sidebar();
-get_footer();
+			</main><!-- #content -->
+
+			<!-- SIDEBAR
+            ================================================== -->
+			<aside class="col-sm-4">
+				<?php get_sidebar(); ?>
+			</aside>
+
+		</div><!-- #primary -->
+	</div><!-- .container -->
+
+<?php get_footer(); ?>
