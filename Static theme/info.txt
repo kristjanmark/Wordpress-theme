@@ -1,0 +1,4 @@
+Lecture Description
+In this lecture, I'll show you how to correctly set up your production environment.
+
+There are no available downloads for this lecture.
