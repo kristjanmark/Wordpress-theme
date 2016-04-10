@@ -17,7 +17,7 @@
 		<div class="row">
 			<div class="col-sm-6 col-sm-offset-3">
 				<h2>Are you ready to take your coding skills to the <strong>next level</strong>?</h2>
-				<p><a href="#" class="btn btn-lg btn-block btn-success">Yes, sign me up!</a></p>
+				<p><a href="" class="btn btn-lg btn-block btn-success">Yes, sign me up!</a></p>
 			</div><!-- end col -->
 		</div><!-- row -->
 	</div><!-- container -->
@@ -29,21 +29,21 @@
 <footer>
 	<div class="container">
 		<div class="col-sm-3">
-			<p><a href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.png" alt="Bootstrap to WordPress"></a></p>
+			<p><a href="/"><img src="assets/img/logo.png" alt="Bootstrap to WordPress"></a></p>
 		</div><!-- end col -->
 		<div class="col-sm-6">
-			<?php
-			wp_nav_menu( array(
-
-				'theme_location'	=> 'footer',
-				'container'			=> 'nav',
-				'menu_class'		=> 'list-unstyled list-inline'
-
-			) );
-			?>
+			<nav>
+				<ul class="list-unstyled list-inline">
+					<li><a href="">Home</a></li>
+					<li><a href="">Blog</a></li>
+					<li><a href="">Resources</a></li>
+					<li><a href="">Contact</a></li>
+					<li class="signup-link"><a href="">Sign up now</a></li>
+				</ul>
+			</nav>
 		</div><!-- end col -->
 		<div class="col-sm-3">
-			<p class="pull-right"><?php bloginfo('name'); ?> &copy; <?php echo date('Y'); ?> <?php the_author_link(); ?></p>
+			<p class="pull-right">&copy; 2014 Brad Hussey</p>
 		</div><!-- end col -->
 	</div><!-- container -->
 </footer>
@@ -67,12 +67,11 @@
 					<div class="form-group">
 						<label class="sr-only" for="subscribe-name">Your first name</label>
 						<input type="text" class="form-control" id="subscribe-name" placeholder="Your first name">
-					</div><!-- form-group -->
+					</div>
 					<div class="form-group">
 						<label class="sr-only" for="subscribe-email">and your email</label>
 						<input type="text" class="form-control" id="subscribe-email" placeholder="and your email">
-					</div><!-- form-group -->
-
+					</div>
 					<input type="submit" class="btn btn-danger" value="Subscribe!">
 				</form>
 

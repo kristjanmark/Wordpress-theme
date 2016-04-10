@@ -73,11 +73,6 @@ and Blueprint http://www.blueprintcss.org/
 5.2 Menus
 --------------------------------------------------------------*/
 
-.navbar-nav > li.current_page_item a,
-.navbar-nav > li.current_page_parent a {
-	color: white;
-}
-
 /* Small menu */
 .menu-toggle {
 	display: none;
@@ -385,20 +380,21 @@ Blue Gray:  #3e4249
 
 */
 
-/* === GENERAL === */
+/* ==== GENERAL ==== */
 
 body {
 	margin-top: 50px;
 	font-family: 'proxima-nova', 'Raleway', Helvetica, sans-serif;
 	font-size: 16px;
-	background: url('/wp-content/themes/bootstrap2wordpress/assets/img/tile.jpg') top left repeat;
+	background: url('assets/img/tile.jpg') top left repeat;
 }
 
-.logged-in .navbar-fixed-top {
-	top: 32px;
+.logged-in .navbar-fixed-top{
+	top:32px;
+
 }
 
-/* === GLOBAL === */
+/* ==== GLOBAL ==== */
 
 h1,h2,h3,h4,h5,h6 {
 	-webkit-font-smoothing: antialiased;
@@ -408,10 +404,6 @@ h1,h2,h3,h4,h5,h6 {
 
 h1 {
 	font-size: 3em;
-}
-
-h1 small {
-	color: white;
 }
 
 h1,h2 {
@@ -426,12 +418,12 @@ h4 {
 	font-size: 18px;
 }
 
-p {
-	margin: 0 0 15px;
-}
-
 p.lead {
 	font-weight: normal;
+}
+
+p {
+	margin: 0 0 15px;
 }
 
 a:link, a:visited {
@@ -441,6 +433,27 @@ a:link, a:visited {
 a:hover {
 	text-decoration: none;
 	color: #c9302c;
+}
+
+blockquote {
+	padding: 0;
+	border: none;
+	font-style: italic;
+	text-align: left;
+}
+
+blockquote cite {
+	display: block;
+	color: #777;
+	margin: 15px 0 0 0;
+}
+
+blockquote:before {
+	display: none;
+}
+
+img {
+	max-width: 100%;
 }
 
 button, input, .btn, a.btn {
@@ -453,13 +466,8 @@ button, input, .btn, a.btn {
 	font-weight: bold;
 }
 
-button.btn:focus {
-	outline: none !important;
-}
-
-.btn-danger {
-	background-color: #dd5638;
-	border-collapse: #d95131;
+.btn:focus {
+	outline: none;
 }
 
 .btn-success {
@@ -472,12 +480,21 @@ button.btn:focus {
 	border-color: #6a9b3d;
 }
 
-img {
-	max-width: 100%;
+.btn-danger {
+	background-color: #dd5638;
+	border-color: #d95131;
 }
 
-.modal-content {
-	background: url('/wp-content/themes/bootstrap2wordpress/assets/img/tile.jpg') top left repeat;
+.text-danger, li.text-danger a {
+	color: #dd5638;
+}
+
+a.text-danger:hover {
+	color: #e55939;
+}
+
+.modal-content{
+	background: url('assets/img/tile.jpg') top left repeat;
 }
 
 .badge.social {
@@ -507,29 +524,108 @@ img {
 	background: #db4b39;
 }
 
-blockquote {
-	padding: 0;
-	border: none;
-	font-style: italic;
-	text-align: left;
+/* === CUSTOM ICON SPRITES === */
+
+i.ci {
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background: url('assets/img/icon-sprite.png') no-repeat;
 }
 
-blockquote cite {
+.ci.ci-computer 	{ background-position: 0 0; }
+.ci.ci-watch		{ background-position: -40px 0; }
+.ci.ci-calendar		{ background-position: -80px 0; }
+.ci.ci-community	{ background-position: -120px 0; }
+.ci.ci-instructor	{ background-position: -160px 0; }
+.ci.ci-device		{ background-position: -200px 0; }
+
+/* ==== FORMS ==== */
+
+label {
 	display: block;
-	color: #777;
-	margin: 15px 0 0 0;
+	font-weight: bold;
 }
 
-blockquote:before {
-	display: none;
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	display: block;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 6px 12px;
 }
 
+input[type="submit"],
+button[type="submit"] {
+	display: inline-block;
+	margin-bottom: 0;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 1.33;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: none;
+	border: none;
+	border-radius: 6px;
+}
 
-/* === HERO === */
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+	outline: none;
+	border: none;
+	background: #aaa;
+}
+
+form.search-form .form-group {
+	margin: 0;
+}
+
+form.search-form .input-group {
+	width: 100%;
+}
+
+form.search-form .input-group input[type="search"],
+form.search-form .input-group input[type="text"] {
+	width: 70%;
+}
+
+form.search-form .input-group input[type="submit"] {
+	width: 30%;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	float: right;
+}
+
+form textarea {
+	width: 100%;
+	border: 1px solid #ccc;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+
+/* ==== HERO ==== */
 
 #hero {
-	background: url('/wp-content/themes/bootstrap-to-wordpress/assets/img/hero-bg.jpg') 50% 0 repeat fixed;
+	background: url('assets/img/hero-bg.jpg') 50% 0 repeat fixed;
 	min-height: 500px;
+	position: relative;
+	display: table;
+	width: 100%;
 	padding: 40px 0;
 	color: white;
 	-webkit-font-smoothing: antialiased;
@@ -539,6 +635,8 @@ blockquote:before {
 #hero article {
 	width: 100%;
 	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
 }
 
 #hero .hero-text {
@@ -552,8 +650,8 @@ blockquote:before {
 
 #price-timeline .price {
 	display: inline-block;
-	margin: 0 2% 0 0;
 	width: 30%;
+	margin: 0 2% 0 0;
 	background: #3e4249;
 	padding: 10px 20px 30px;
 	position: relative;
@@ -603,10 +701,6 @@ section {
 	padding: 80px 0;
 }
 
-section.main-content {
-	padding: 40px 0;
-}
-
 .section-header {
 	text-align: center;
 }
@@ -617,6 +711,10 @@ section h2 {
 
 section h3 {
 	margin: 30px 0 10px;
+}
+
+section.main-content {
+	padding: 40px 0;
 }
 
 #primary {
@@ -630,12 +728,12 @@ section h3 {
 }
 
 .feature-image-default {
-	background: url('/wp-content/themes/bootstrap-to-wordpress/assets/img/stuff-feature.jpg') no-repeat;
+	background: url('assets/img/stuff-feature.jpg') no-repeat;
 	background-size: cover;
 }
 
 .feature-image-default-alt {
-	background: url('/wp-content/themes/bootstrap-to-wordpress/assets/img/hipster-stuff.jpg') no-repeat;
+	background: url('assets/img/hipster-stuff.jpg') no-repeat;
 	background-size: cover;
 }
 
@@ -659,14 +757,14 @@ section h3 {
 	margin: 7px 0 0 0;
 }
 
-#who-benefits {
-	background: white;
-}
-
 #course-features {
 	background: #3e4249;
 	color: white;
 	text-align: center;
+}
+
+#who-benefits {
+	background: white;
 }
 
 #project-features {
@@ -674,14 +772,14 @@ section h3 {
 }
 
 #featurette {
-	background: url('/wp-content/themes/bootstrap-to-wordpress/assets/img/stuff-bg.jpg') 50% 100% repeat fixed;
+	background: url('assets/img/stuff-bg.jpg') 50% 100% repeat fixed;
 	background-size: cover;
 	text-align: center;
 	color: white;
 }
 
 #instructor {
-	background: white url('/wp-content/themes/bootstrap-to-wordpress/assets/img/brad-elvis.png') 90% -10px no-repeat;
+	background: white url('assets/img/brad-elvis.png') 90% -10px no-repeat;
 }
 
 #instructor h2 {
@@ -725,14 +823,12 @@ section h3 {
 }
 
 .testimonial img {
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
 	border-radius: 50%;
 }
 
 #signup {
 	text-align: center;
-	background: url('/wp-content/themes/bootstrap-to-wordpress/assets/img/hipster-stuff.jpg') center center repeat fixed;
+	background: url('assets/img/hipster-stuff.jpg') center center repeat fixed;
 	background-size: cover;
 	color: white;
 	padding: 140px 0;
@@ -777,7 +873,7 @@ footer li.signup-link a:hover {
 	font-weight: bold;
 }
 
-/* === BLOG === */
+/* ==== BLOG ==== */
 
 .post, .widget, #comments {
 	position: relative;
@@ -796,7 +892,6 @@ footer li.signup-link a:hover {
 	padding: 20px;
 }
 
-.post header h1,
 .post header h3 {
 	margin: 0 0 15px;
 	padding: 0 0 15px;
@@ -804,10 +899,13 @@ footer li.signup-link a:hover {
 }
 
 .post header h1 {
+	margin: 0 0 15px;
+	padding: 0 0 15px;
+	border-bottom: solid 1px #ddd;
 	font-size: 24px;
 }
 
-.post-image img {
+.post-image {
 	height: auto;
 }
 
@@ -824,33 +922,6 @@ footer li.signup-link a:hover {
 	padding: 0;
 }
 
-/* === WIDGETS === */
-
-.widget {
-	padding: 20px;
-}
-
-.widget h4 {
-	margin: 0 0 10px;
-	padding: 0 0 10px;
-	border-bottom: solid 1px #ddd;
-}
-
-.widget ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-.widget ul li {
-	margin: 0 0 5px;
-}
-
-.widget ul li:hover {
-	position: relative;
-	left: 1px;
-}
-
 /* === COMMENTS === */
 
 .post-comments-badge {
@@ -860,9 +931,9 @@ footer li.signup-link a:hover {
 	top: 25px;
 	right: 20px;
 	border: none;
-	-webkit-border-radius: 100%;
-	-moz-border-radius: 100%;
-	border-radius: 100%;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
 	background: #79b044;
 	text-align: center;
 	display: table;
@@ -908,7 +979,7 @@ footer li.signup-link a:hover {
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
-	border: solid 1px rgba(0,0,0,0,0.03);
+	border: solid 1px rgba(0,0,0,0.03);
 }
 
 #comments ol li ol.children {
@@ -923,20 +994,6 @@ footer li.signup-link a:hover {
 	border-top: solid 1px #eee;
 }
 
-/* specific WordPress comment styles */
-#comments footer {
-	background: none;
-	color: inherit;
-}
-
-#comments footer a {
-	color: inherit;
-}
-
-#comments .comment-metadata {
-	margin: 10px 0 0;
-}
-
 /* === RESOURCES === */
 
 .resource {
@@ -949,95 +1006,43 @@ footer li.signup-link a:hover {
 	margin-right: 0;
 }
 
+/* === WIDGETS === */
 
-/* === CUSTOM ICON SPRITES === */
-
-i.ci {
-	display: inline-block;
-	height: 40px;
-	width: 40px;
-	background: url('/wp-content/themes/bootstrap-to-wordpress/assets/img/icon-sprite.png') no-repeat;
+.widget {
+	padding: 20px;
 }
 
-.ci.ci-computer			{ background-position: 0 0; }
-.ci.ci-watch			{ background-position: -40px 0; }
-.ci.ci-calendar			{ background-position: -80px 0; }
-.ci.ci-community		{ background-position: -120px 0; }
-.ci.ci-instructor		{ background-position: -160px 0; }
-.ci.ci-device			{ background-position: -200px 0; }
-
-/* === FORMS === */
-
-label {
-	display: block;
-	font-weight: bold;
+.widget h4 {
+	margin: 0 0 10px;
+	padding: 0 0 10px;
+	border-bottom: solid 1px #ddd;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-textarea {
-	color: #666;
-	border: 1px solid #ccc;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	display: block;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	width: 100%;
-	padding: 6px 12px;
+.widget ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
-input[type="submit"],
-button[type="submit"] {
-	display: inline-block;
-	margin-bottom: 0;
-	font-size: 18px;
-	font-weight: bold;
-	line-height: 1.33;
-	text-align: center;
-	white-space: nowrap;
-	vertical-align: middle;
-	cursor: pointer;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	background-image: none;
-	border: none;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
+.widget ul li {
+	margin: 0 0 5px;
 }
 
-input[type="submit"]:hover,
-button[type="submit"]:hover {
-	outline: none;
-	border: none;
-	background: #aaa;
+.widget ul li:hover {
+	position: relative;
+	left: 1px;
 }
 
 /* ==== MEDIA QUERIES ==== */
 
-@media screen and ( max-width : 991px ) {
+@media screen and (max-width : 991px) {
 	#instructor .container {
 		background: rgba(255,255,255,0.8);
 		padding: 20px;
 	}
 }
 
-/* Fix the top margin when logged in */
-@media screen and (max-width: 782px) {
-	.logged-in .navbar-fixed-top {
-		top: 46px;
-	}
-}
-
-@media screen and ( max-width : 768px ) {
+@media screen and (max-width : 768px) {
 	.logo {
 		width: 50%;
 	}
@@ -1053,18 +1058,22 @@ button[type="submit"]:hover {
 	.resource {
 		width: 48%;
 		margin-right: 2%;
-		min-height: 800px;
 	}
 }
 
-/* Fix the top margin when logged in */
+@media screen and (max-width: 782px) {
+	.logged-in .navbar-fixed-top {
+		top: 46px;
+	}
+}
+
 @media screen and (max-width: 600px) {
 	.logged-in .navbar-fixed-top {
-		top: 42px;
+		top:42px;
 	}
 }
 
-@media screen and ( max-width : 568px ) {
+@media screen and (max-width : 568px) {
 	#instructor .num {
 		height: 100px;
 		width: 100px;
@@ -1078,6 +1087,5 @@ button[type="submit"]:hover {
 	.resource {
 		width: 100%;
 		margin-right: 0;
-		min-height: 0;
 	}
 }
