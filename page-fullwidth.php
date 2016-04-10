@@ -16,6 +16,7 @@ get_header();
 
 <?php } else { // Fallback image ?>
 
+    
     <section class="feature-image feature-image-default" data-type="background" data-speed="2">
         <h1 class="page-title"><?php the_title(); ?></h1>
     </section>
