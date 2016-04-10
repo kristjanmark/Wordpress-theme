@@ -15,7 +15,7 @@
 
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php bootstrap2wordpress_posted_on(); ?>
+			<?php bootstrap_to_wordpress_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -25,6 +25,6 @@
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
-		<?php bootstrap2wordpress_entry_footer(); ?>
+		<?php bootstrap_to_wordpress_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
