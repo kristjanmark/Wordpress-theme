@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package teema
+ * @package Bootstrap_to_Wordpress
  */
 
 get_header(); ?>

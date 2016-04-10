@@ -2,34 +2,34 @@
 /**
  * Jetpack Compatibility File.
  *
- * @link https://jetpack.com/
+ * @link https://jetpack.me/
  *
- * @package teema
+ * @package Bootstrap_to_Wordpress
  */
 
 /**
  * Jetpack setup function.
  *
- * See: https://jetpack.com/support/infinite-scroll/
- * See: https://jetpack.com/support/responsive-videos/
+ * See: https://jetpack.me/support/infinite-scroll/
+ * See: https://jetpack.me/support/responsive-videos/
  */
-function teema_jetpack_setup() {
+function bootstrap2wordpress_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'render'    => 'teema_infinite_scroll_render',
+		'render'    => 'bootstrap2wordpress_infinite_scroll_render',
 		'footer'    => 'page',
 	) );
 
 	// Add theme support for Responsive Videos.
 	add_theme_support( 'jetpack-responsive-videos' );
 }
-add_action( 'after_setup_theme', 'teema_jetpack_setup' );
+add_action( 'after_setup_theme', 'bootstrap2wordpress_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function teema_infinite_scroll_render() {
+function bootstrap2wordpress_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :

@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package teema
+ * @package Bootstrap_to_Wordpress
  */
 
 ?>
@@ -15,9 +15,9 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'teema' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'teema' ), 'WordPress' ); ?></a>
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'bootstrap2wordpress' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'bootstrap2wordpress' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'teema' ), 'teema', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'bootstrap2wordpress' ), 'bootstrap2wordpress', '<a href="http://underscores.me/" rel="designer">Rait Rääk</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

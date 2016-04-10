@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package teema
+ * @package Bootstrap_to_Wordpress
  */
 
 ?>
@@ -15,7 +15,7 @@
 
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php teema_posted_on(); ?>
+			<?php bootstrap2wordpress_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -25,6 +25,6 @@
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
-		<?php teema_entry_footer(); ?>
+		<?php bootstrap2wordpress_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

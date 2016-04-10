@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package teema
+ * @package Bootstrap_to_Wordpress
  */
 
 /**
@@ -13,7 +13,7 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-function teema_body_classes( $classes ) {
+function bootstrap2wordpress_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
@@ -26,4 +26,4 @@ function teema_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'teema_body_classes' );
+add_filter( 'body_class', 'bootstrap2wordpress_body_classes' );

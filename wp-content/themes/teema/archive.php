@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package teema
+ * @package Bootstrap_to_Wordpress
  */
 
 get_header(); ?>
